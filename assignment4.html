@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .box-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .box-model-example {
+            margin-bottom: 40px;
+        }
+
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid #3498db;
+            margin: 20px;
+            background-color: #eaf0f9;
+            text-align: center;
+            color: #333;
+            display: inline-block;
+        }
+
+       
+        .content-box .box {
+            box-sizing: content-box;
+        }
+
+        
+        
+        .border-box .box {
+            box-sizing: border-box;
+        }
+
+        .box h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .box p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box-container">
+        <h1>CSS Box Model Demonstration</h1>
+
+        
+        <div class="box-model-example content-box">
+            <h2>Content-Box Model</h2>
+            <p>In the <strong>content-box</strong> model, the width and height of the box are applied only to the content. Padding and borders increase the overall size of the element.</p>
+            <div class="box">
+                <h3>Box 1</h3>
+                <p>Padding: 20px<br>Border: 5px</p>
+            </div>
+            <div class="box">
+                <h3>Box 2</h3>
+                <p>Padding: 20px<br>Border: 5px</p>
+            </div>
+        </div>
+
+  
+        
+        <div class="box-model-example border-box">
+            <h2>Border-Box Model</h2>
+            <p>In the <strong>border-box</strong> model, the width and height of the box include the content, padding, and borders. The overall size of the element stays the same, regardless of padding and border size.</p>
+            <div class="box">
+                <h3>Box 3</h3>
+                <p>Padding: 20px<br>Border: 5px</p>
+            </div>
+            <div class="box">
+                <h3>Box 4</h3>
+                <p>Padding: 20px<br>Border: 5px</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes and Elements Demo</title>
+    <style>
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+       
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+    
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+       
+        
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+   
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+       
+        
+        .button:active {
+            background-color: #00448f;
+        }
+
+        
+        .button:focus {
+            outline: 2px solid #0056b3;
+        }
+
+    
+        ul li:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        ul li:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+
+        
+        .card::before {
+            content: "🌟";
+            font-size: 30px;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            background-color: #ffdd57;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card::after {
+            content: "More Info";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+       
+        .focus-container {
+            margin-top: 20px;
+        }
+
+        .focus-container input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .focus-container input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo Classes and Elements Demo</h1>
+
+    <div class="container">
+       
+        <div class="card">
+            <h2>Interactive Card</h2>
+            <p>This card uses hover and pseudo-elements.</p>
+            <button class="button">Click Me</button>
+        </div>
+
+        
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+
+ 
+    <div class="focus-container">
+        <label for="focus-input">Focus on this input:</label>
+        <input type="text" id="focus-input" placeholder="Click to focus">
+    </div>
+</body>
+</html>
